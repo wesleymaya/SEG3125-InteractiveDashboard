@@ -1,0 +1,17 @@
+body{
+  background-color: lightgray;
+}
+
+nav li{
+  margin-right: 10px;
+}
+
+#navbarTitle{
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.rent-div, .income-div{
+  margin-top: 25px;
+  text-align: center;
+}

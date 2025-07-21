@@ -1,0 +1,33 @@
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+const rentData = [
+      { name: '2019', price: 1270 },
+      { name: '2020', price: 1374 },
+      { name: '2021', price: 1431 },
+      { name: '2022', price: 1446 },
+      { name: '2023', price: 1538 },
+      { name: '2024', price: 1708 },
+    ];
+
+// **Add translation function
+function rentGraph(){
+  return(
+    <div>
+      <ResponsiveContainer width="95%" height={350}>
+        <LineChart
+          data={rentData}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend/>
+          <Line type="monotone" dataKey="price" label='Price' stroke="#8884d8" activeDot={{ r: 7 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  )
+};
+
+export default rentGraph;
