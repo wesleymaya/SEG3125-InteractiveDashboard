@@ -14,13 +14,15 @@ const rentData = [
 
 function RentGraph(){
   const {t, i18n} = useTranslation();
+  const currencyTranslator = i18n.language || 'en-CA';
+
 
   return(
     <div>
       <ResponsiveContainer width="95%" height={350}>
         <LineChart
           data={rentData}
-          margin={{ top: 5, right: 30, left: 30, bottom: 20 }}
+          margin={{ top: 10, right: 30, left: 70, bottom: 20 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" 
@@ -34,11 +36,31 @@ function RentGraph(){
             value: t('price'),
             angle: -90,
             position: 'left',
-            offset: 0,
-          }}/>
-          <Tooltip />
-          {/* <Legend/> */}
-          <Line type="monotone" dataKey="price" stroke="#8884d8" activeDot={{ r: 7 }} />
+            offset: 40,
+          }}
+          tickFormatter={(value) =>
+            value.toLocaleString(currencyTranslator, {
+              style: 'currency',
+              currency: 'CAD',
+              maximumFractionDigits: 0,
+            })
+          }
+          />
+          <Tooltip 
+          formatter={(value) =>
+            value.toLocaleString(currencyTranslator, {
+              style: 'currency',
+              currency: 'CAD',
+              maximumFractionDigits: 0,
+            })
+          }
+          />
+          <Line 
+          type="monotone" 
+          dataKey="price" 
+          stroke="#8884d8" 
+          activeDot={{ r: 7 }} 
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
