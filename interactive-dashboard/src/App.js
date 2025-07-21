@@ -1,12 +1,19 @@
 import './App.css';
 import RentGraph from './pages/rentGraph.js';
 import IncomeGraph from './pages/incomeGraph.js';
+import './i18nTranslations.js';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const {t, i18n} = useTranslation();
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" id='navbarTitle' href="#">Toronto Cost of Living</a>
+      <a className="navbar-brand" id='navbarTitle' href="#">{t('websiteTitle')}</a>
       <button
         className="navbar-toggler"
         type="button"
@@ -21,7 +28,7 @@ function App() {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">Home</a>
+            <a className="nav-link" href="#">{t('home')}</a>
           </li>
           <li className="nav-item">
             <div className="dropdown">
@@ -36,8 +43,8 @@ function App() {
                 Language
               </button>
               <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button className="dropdown-item" type="button">English</button>
-                <button className="dropdown-item" type="button">Spanish</button>
+                <button className="dropdown-item" type="button" onClick={() => changeLanguage('en')}>{t('english')}</button>
+                <button className="dropdown-item" type="button" onClick={() => changeLanguage('es')}>{t('spanish')}</button>
               </div>
             </div>
           </li>
@@ -46,14 +53,14 @@ function App() {
     </nav>
 
     <div className="rent-div">
-      <h2>Average Rent in Toronto</h2>
-      <p>This graph shows the average price of a one-bedroom apartment in Toronto over the past 6 years.</p>
+      <h2>{t('chart1Title')}</h2>
+      <p>{t('chart1Desc')}</p>
       <RentGraph />
     </div>
 
     <div className="income-div">
-      <h2>Median Income in Toronto</h2>
-      <p>This graph shows the median income of a person working in Toronto over the past 6 years.</p>
+      <h2>{t('chart2Title')}</h2>
+      <p>{t('chart2Desc')}</p>
       <IncomeGraph />
     </div>
     </>

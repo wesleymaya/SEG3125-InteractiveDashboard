@@ -4,6 +4,7 @@ body{
 
 nav li{
   margin-right: 10px;
+  margin-right: 10px;
 }
 
 #navbarTitle{
@@ -13,5 +14,6 @@ nav li{
 
 .rent-div, .income-div{
   margin-top: 25px;
+  margin-bottom: 35px;
   text-align: center;
 }
