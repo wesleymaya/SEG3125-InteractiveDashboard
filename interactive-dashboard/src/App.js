@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" id='navbarTitle' href="#">{t('websiteTitle')}</a>
+      <h2 className="navbar-brand" id='navbarTitle'>{t('websiteTitle')}</h2>
       <button
         className="navbar-toggler"
         type="button"
@@ -28,7 +28,7 @@ function App() {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">{t('home')}</a>
+            <h4 className="nav-link">{t('home')}</h4>
           </li>
           <li className="nav-item">
             <div className="dropdown">

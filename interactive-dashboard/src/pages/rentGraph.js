@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next';
 
 
 const rentData = [
+      { name: '2018', price: 1202 },
       { name: '2019', price: 1270 },
       { name: '2020', price: 1374 },
       { name: '2021', price: 1431 },
       { name: '2022', price: 1446 },
       { name: '2023', price: 1538 },
-      { name: '2024', price: 1708 },
     ];
 
 function RentGraph(){
