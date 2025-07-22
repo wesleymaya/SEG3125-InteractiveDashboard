@@ -10,7 +10,7 @@ const resources = {
         "home": "Home",
         "chart1Title": "Average Rent in Toronto",
         "chart1Desc": "This graph shows the average price of a one-bedroom apartment in Toronto from 2018-2023.",
-        "chart2Title": "Average Income in Toronto",
+        "chart2Title": "Median Income in Toronto",
         "chart2Desc": "This graph shows the median income of a person working in Toronto from 2018-2023.",
         'year': "Year",
         "price": "Price",
