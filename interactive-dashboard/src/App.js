@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" id='navbarTitle' href="https://starlit-sunburst-9a1c18.netlify.app/">{t('websiteTitle')}</a>
+      <a className="navbar-brand" id='navbarTitle' href="https://toronto-cost-of-living-dashboard.netlify.app/">{t('websiteTitle')}</a>
       <button
         className="navbar-toggler"
         type="button"
@@ -28,7 +28,7 @@ function App() {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <h2 className="nav-link" href="https://starlit-sunburst-9a1c18.netlify.app/">{t('home')}</h2>
+            <a className="nav-link" href="https://toronto-cost-of-living-dashboard.netlify.app/">{t('home')}</a>
           </li>
           <li className="nav-item">
             <div className="dropdown">
